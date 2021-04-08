@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM System</title>
+    <link rel="stylesheet" href="atm.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="bank-info">
+                <h1 class="bank-name">Capital  Bankers</h1>
+                <h3 class="mob">Toll-Free : 1800-0001-0001</h3>
+            </div>
+            <div class="date-time">
+                <span class="date">14-02-2021</span>
+                <span class="time">14:00:00</span>
+            </div>
+           <a href="#" class="cancel big-cancel">Cancel</a>
+        </div>
+
+        <div class="main-screen">
+
+            <div class="main-screen-options">
+                <p class="my-name">Welcome back <strong>Hemaratna Sonar !</strong></p>
+                <div class="instructions">
+                    <ul class="grid-list">
+                        <li><a href="#" class="grid-items cashwid" style="padding: 1.5rem 8.6rem; background: #ff7b00; color: #000;">Cash Withdrawal</a></li>
+                        <li><a href="#" class="grid-items" style="padding: 1.5rem 8.6rem;">Money Transfer</a></li>
+                        <li><a href="#" class="grid-items accdetails">Account Details</a></li>
+                        <li><a href="#" class="grid-items">Other Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-screen-account-type">
+                <h1 class="select-acc-type">Select Your Account Type !</h1>
+                <ul class="acc-types">
+                    <li><a href="#" class="acc-items savingacc" style="padding: 1.5rem 8.6rem; background: #ff7b00; color: #000;">Saving Account</a></li>
+                    <li><a href="#" class="acc-items" style="padding: 1.5rem 8.4rem;">Current Account</a></li>
+                    <li><a href="#" class="acc-items" style="padding: 1.5rem 8.7rem;">Other Accounts</a></li>
+                </ul>
+            </div>
+
+            <div class="main-screen-enter-amount">
+                <h1 class="enter-amount">Enter Amount in the Multiple of</h1>
+                <span class="notes"><img src="images/100.png" alt="" style="max-width: 14.5rem; margin-top: 5px;"></span>
+                <span class="notes"><img src="images/501.jpg" alt="" style="max-width: 14rem;"></span>
+
+                <div class="amount">
+                    <form>
+                        <input type="text" placeholder="Enter Amount" class="amount-screen">
+                        <table>
+                            <tr>
+                                <td><input type="button" value="1" onclick="dis('1')"></td>
+                                <td><input type="button" value="2" onclick="dis('2')"></td>
+                                <td><input type="button" value="3" onclick="dis('3')"></td>
+                                <td><input type="button" value="Clear" onclick="clearAmount()" style="padding: 1rem 2.6rem;"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" value="4" onclick="dis('4')"></td>
+                                <td><input type="button" value="5" onclick="dis('5')"></td>
+                                <td><input type="button" value="6" onclick="dis('6')"></td>
+                                <td><input type="button" value="Cancel" onclick="cancelAmount()" style="padding: 1rem 2rem;"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" value="7" onclick="dis('7')"></td>
+                                <td><input type="button" value="8" onclick="dis('8')"></td>
+                                <td><input type="button" value="9" onclick="dis('9')"></td>
+                                <td><input type="button" value="Enter" style="padding: 1rem 2.65rem;" class="enter-the-amount"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" value="*" onclick="dis('*')"></td>
+                                <td><input type="button" value="0" onclick="dis('0')"></td>
+                                <td><input type="button" value="#" onclick="dis('#')"></td>
+                                <td><input type="button" value="--" style="padding: 1rem 4.2rem;"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div class="main-screen-enter-pass">
+                <h1 class="enter-pass">Enter Your 4 Digit PIN here </h1>
+                <div class="pass">
+                    <form>
+                        <input type="password" placeholder="Enter PIN" class="pin-screen">
+                        <table>
+                            <tr>
+                                <td><input type="button" value="1" onclick="dispin()"></td>
+                                <td><input type="button" value="2" onclick="dispin()"></td>
+                                <td><input type="button" value="3" onclick="dispin()"></td>
+                                <td><input type="button" value="Clear" onclick="clearPin()" style="padding: 1rem 2.6rem;"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" value="4" onclick="dispin()"></td>
+                                <td><input type="button" value="5" onclick="dispin()"></td>
+                                <td><input type="button" value="6" onclick="dispin()"></td>
+                                <td><input type="button" value="Cancel" onclick="cancelPin()"style="padding: 1rem 2rem;"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" value="7" onclick="dispin()"></td>
+                                <td><input type="button" value="8" onclick="dispin()"></td>
+                                <td><input type="button" value="9" onclick="dispin()"></td>
+                                <td><input type="button" value="Enter" style="padding: 1rem 2.65rem;" class="enter-the-pin"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" value="*" onclick="dispin()"></td>
+                                <td><input type="button" value="0" onclick="dispin()"></td>
+                                <td><input type="button" value="#" onclick="dispin()"></td>
+                                <td><input type="button" value="--" style="padding: 1rem 4.2rem;"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div class="main-screen-final-output">
+                <div class="final-result"><h1 class="transaction-status">ghytydj rjusj hg,k</h1></div>
+                <div class="balance-left"><h1 class="left-balance">y8p;;[i9lt8;p9<span class="rupee">hello</span></h1></div>
+            </div>
+        </div>
+    </div>   
+
+    <script src="atm.js"></script>
+    <script>
+
+        let day = new Date();
+        let today = day.getDate();
+        let month = day.getMonth();
+        let year = day.getFullYear();
+        document.querySelector(".top .date-time .date").innerHTML = `${today} / ${month+1} / ${year}`;
+
+
+
+        function clock(){
+            let dT = new Date();
+            let h = dT.getHours();
+            let m = dT.getMinutes();
+            let s = dT.getSeconds();
+
+            document.querySelector(".top .date-time .time").innerHTML = `${h} : ${m} : ${s}`;
+        }
+        
+        setInterval(clock,1000);
+    </script>
+</body>
+</html>
